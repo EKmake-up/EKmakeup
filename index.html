@@ -3,10 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja Strona</title>
+    <title>Uwydatnijswojepiekno</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #fce4ec; }
+        header { background-color: #e91e63; color: white; padding: 15px; font-size: 24px; }
+        section { margin: 20px; padding: 20px; background: white; border-radius: 10px; }
+        .gallery img { width: 100px; margin: 10px; border-radius: 10px; }
+        button { background-color: #e91e63; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; }
+    </style>
 </head>
 <body>
-    <h1>Witaj na mojej stronie!</h1>
-    <p>To moja pierwsza strona na GitHub Pages.</p>
+    <header>Uwydatnijswojepiekno - Makijaż dla każdej kobiety</header>
+    
+    <section id="about">
+        <h2>O mnie</h2>
+        <p>Nazywam się [Twoje Imię] i od lat pomagam kobietom poczuć się pięknie.</p>
+    </section>
+    
+    <section id="gallery">
+        <h2>Galeria</h2>
+        <div class="gallery">
+            <img src="przyklad1.jpg" alt="Makijaż 1">
+            <img src="przyklad2.jpg" alt="Makijaż 2">
+        </div>
+    </section>
+    
+    <section id="booking">
+        <h2>Rezerwacja</h2>
+        <p>Rezerwacje dostępne tylko: <br> piątki po 17:00, soboty i niedziele.</p>
+        <button onclick="window.location.href='https://forms.gle/link_do_rezerwacji'">Zarezerwuj termin</button>
+    </section>
+    
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Email: kontakt@uwydatnijswojepiekno.pl</p>
+        <p>Telefon: 123-456-789</p>
+    </section>
 </body>
 </html>
