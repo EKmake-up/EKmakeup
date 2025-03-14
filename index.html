@@ -15,58 +15,66 @@
         /* Ogólny styl strony */
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f8f7f7;
+            background-color: #f7f7f7;
             color: #333;
             line-height: 1.6;
             font-size: 16px;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Nagłówek */
         header {
-            background-color: #e91e63;
+            background-color: #e91e63;  /* Kolor różowy zbliżony do strony Patrycji */
             color: white;
-            padding: 40px;
+            padding: 50px 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 36px;
-            font-weight: bold;
+            font-size: 42px;
+            font-weight: 700;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
         }
 
         /* Sekcje */
         section {
-            margin: 40px auto;
+            width: 90%;
             max-width: 1200px;
-            padding: 20px;
+            margin: 40px auto;
+            padding: 30px;
             background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         section h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 32px;
             font-weight: 600;
-            color: #333;
-            text-align: center;
+            color: #e91e63;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         /* Galeria */
         .gallery {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
-            flex-wrap: wrap;
+            margin-top: 30px;
         }
 
         .gallery img {
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 10px;
             transition: transform 0.3s ease-in-out;
         }
 
@@ -78,12 +86,14 @@
         button {
             background-color: #e91e63;
             color: white;
-            padding: 15px 25px;
+            padding: 15px 30px;
             border: none;
             cursor: pointer;
             border-radius: 30px;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: background-color 0.3s ease-in-out;
         }
 
@@ -91,34 +101,59 @@
             background-color: #d81b60;
         }
 
-        /* Formularz kontaktowy */
-        #contact p {
-            font-size: 18px;
-            margin: 10px 0;
-            text-align: center;
+        /* Linki w kontakcie */
+        #contact p a {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: 600;
         }
 
-        /* Mobilne */
+        #contact p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sekcja "O mnie" */
+        #about p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 20px auto;
+            max-width: 800px;
+            color: #555;
+        }
+
+        /* Responsywność */
         @media (max-width: 768px) {
             header {
-                font-size: 28px;
+                font-size: 36px;
+                padding: 40px 20px;
+            }
+
+            section {
+                width: 95%;
                 padding: 20px;
             }
 
-            .gallery img {
-                width: 100%;
-                height: auto;
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            button {
+                padding: 12px 25px;
+                font-size: 18px;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>Elwira Kosińska Make-up</header>
+    <header>
+        <img src="logo.png" alt="Elwira Kosińska Make-up" style="width: 180px; margin-bottom: 10px;">
+        Elwira Kosińska Make-up
+    </header>
     
     <section id="about">
         <h2>O mnie</h2>
-        <p style="font-size: 20px; line-height: 1.6; text-align: center;">Nazywam się Elwira i pomagam kobietom poczuć się pięknie, uwydatniając ich naturalne piękno dzięki makijażowi. Z pasją tworzę indywidualne stylizacje, które podkreślają charakter każdej z Pań.</p>
+        <p>Witaj! Nazywam się Elwira i z pasją tworzę makijaże, które pozwalają kobietom poczuć się pewnie i pięknie. Moją misją jest podkreślenie naturalnego piękna każdej osoby, dostosowując makijaż do jej indywidualnych cech.</p>
     </section>
     
     <section id="gallery">
@@ -126,22 +161,21 @@
         <div class="gallery">
             <img src="przyklad1.jpg" alt="Makijaż 1">
             <img src="przyklad2.jpg" alt="Makijaż 2">
-            <!-- Możesz dodać więcej zdjęć tutaj -->
+            <img src="przyklad3.jpg" alt="Makijaż 3">
+            <img src="przyklad4.jpg" alt="Makijaż 4">
         </div>
     </section>
     
     <section id="booking">
         <h2>Rezerwacja</h2>
-        <p style="font-size: 20px; text-align: center;">Rezerwacje dostępne tylko: <br> piątki po 17:00, soboty i niedziele.</p>
-        <div style="text-align: center;">
-            <button onclick="window.location.href='https://forms.gle/link_do_rezerwacji'">Zarezerwuj termin</button>
-        </div>
+        <p>Rezerwacje dostępne tylko w piątki po 17:00, soboty i niedziele.</p>
+        <button onclick="window.location.href='https://forms.gle/link_do_rezerwacji'">Zarezerwuj termin</button>
     </section>
     
     <section id="contact">
         <h2>Kontakt</h2>
-        <p>Email: <a href="mailto:kontakt@uwydatnijswojepiekno.pl" style="color: #e91e63;">kontakt@uwydatnijswojepiekno.pl</a></p>
-        <p>Telefon: <a href="tel:+48123456789" style="color: #e91e63;">123-456-789</a></p>
+        <p>Email: <a href="mailto:kontakt@uwydatnijswojepiekno.pl">kontakt@uwydatnijswojepiekno.pl</a></p>
+        <p>Telefon: <a href="tel:+48123456789">123-456-789</a></p>
     </section>
 
 </body>
