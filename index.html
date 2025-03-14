@@ -5,19 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elwira Kosińska Make-up</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #fce4ec; }
-        header { background-color: #e91e63; color: white; padding: 15px; font-size: 24px; }
-        section { margin: 20px; padding: 20px; background: white; border-radius: 10px; }
-        .gallery img { width: 100px; margin: 10px; border-radius: 10px; }
-        button { background-color: #e91e63; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; }
+        /* Resetowanie marginesów i paddingów */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ogólny styl strony */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f7f7;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Nagłówek */
+        header {
+            background-color: #e91e63;
+            color: white;
+            padding: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sekcje */
+        section {
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Galeria */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Przyciski */
+        button {
+            background-color: #e91e63;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #d81b60;
+        }
+
+        /* Formularz kontaktowy */
+        #contact p {
+            font-size: 18px;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        /* Mobilne */
+        @media (max-width: 768px) {
+            header {
+                font-size: 28px;
+                padding: 20px;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
+
     <header>Elwira Kosińska Make-up</header>
     
     <section id="about">
         <h2>O mnie</h2>
-        <p>Nazywam się Elwira i pomagam kobietom poczuć się pięknie.</p>
+        <p style="font-size: 20px; line-height: 1.6; text-align: center;">Nazywam się Elwira i pomagam kobietom poczuć się pięknie, uwydatniając ich naturalne piękno dzięki makijażowi. Z pasją tworzę indywidualne stylizacje, które podkreślają charakter każdej z Pań.</p>
     </section>
     
     <section id="gallery">
@@ -25,19 +126,12 @@
         <div class="gallery">
             <img src="przyklad1.jpg" alt="Makijaż 1">
             <img src="przyklad2.jpg" alt="Makijaż 2">
+            <!-- Możesz dodać więcej zdjęć tutaj -->
         </div>
     </section>
     
     <section id="booking">
         <h2>Rezerwacja</h2>
-        <p>Rezerwacje dostępne tylko: <br> piątki po 17:00, soboty i niedziele.</p>
-        <button onclick="window.location.href='https://forms.gle/link_do_rezerwacji'">Zarezerwuj termin</button>
-    </section>
-    
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p>Email: kontakt@uwydatnijswojepiekno.pl</p>
-        <p>Telefon: 123-456-789</p>
-    </section>
-</body>
-</html>
+        <p style="font-size: 20px; text-align: center;">Rezerwacje dostępne tylko: <br> piątki po 17:00, soboty i niedziele.</p>
+        <div style="text-align: center;">
+            <button onclick="window.location.href='https:
